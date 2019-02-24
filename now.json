@@ -1,7 +1,7 @@
 {
   "version": 2,
   "alias": ["nhk.bulkanevcimen.com"],
-  "name": "doushi",
+  "name": "nhk-printer",
   "builds": [
     {"src": "package.json", "use": "@now/static-build"}
   ],
