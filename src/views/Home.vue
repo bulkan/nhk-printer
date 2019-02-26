@@ -1,5 +1,5 @@
 <template>
-  <div class="sheet padding-5mm">
+  <div class="sheet">
     <div class="columns">
       <div class="col">
         <b>[02/22/2019] 日本の「はやぶさ２」がリュウグウという星に下りた</b>
@@ -33,13 +33,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.sheet {
+  margin: 0;
+}
+
 .columns {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  margin: 10px;
 
   .col {
-    padding: 5px;
+    padding: 10px;
     width: 30%;
     min-height: 90vh;
     border: 1px solid #cacaca;
@@ -48,20 +53,22 @@ export default {
       margin-right: 5%;
     }
 
-    article {
-      font-size: 18px;
-    }
 
 
   }
 }
 
 @media print {
-  .col {
-    min-height: auto;
+  .sheet {
+    margin: 5mm auto;
+  }
 
-    article {
-      font-size: 10px;
+  .columns {
+    .col {
+      min-height: auto;
+      height: 200mm;
+      width: 90mm;
+      border: 1px dashed #dfdfdf;
     }
   }
 }
