@@ -10,6 +10,7 @@
     "now-build": "vue-cli-service build"
   },
   "dependencies": {
+    "lodash": "4.17.5",
     "nhkeasy": "^2.1.0",
     "paper-css": "^0.4.1",
     "vue": "^2.6.6",
