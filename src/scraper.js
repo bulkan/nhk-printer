@@ -1,6 +1,6 @@
 import nhkeasy from 'nhkeasy';
 
-const separator = '\n\n&nbsp;\n\n';
+const separator = '\n\n';
 
 function scrapeArticle(body) {
   return new Promise((resolve, reject) => {
@@ -13,7 +13,8 @@ function scrapeArticle(body) {
   });
 }
 
-fetch('http://www3.nhk.or.jp/news/easy/k10011823971000/k10011823971000.html')
-  .then(res => res.text())
-  .then(scrapeArticle)
-  .then(d => console.log(d));
+export default function scraper(articleId) {
+  return fetch(`http://www3.nhk.or.jp/news/easy/${articleId}/${articleId}.html`)
+    .then(res => res.text())
+    .then(scrapeArticle);
+}

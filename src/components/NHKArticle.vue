@@ -1,23 +1,41 @@
 <template>
   <div class="nhkArticle">
     <div>
-      <input placeholder="Article Id" />
-      <button>Scrape</button>
-    <div>
+      <input placeholder="Article Id" v-model="articleId"/>
+      <button :disabled="hasArticleId" @click="scrape()">Scrape</button>
+    </div>
 
-    <article>
-    </article>
+    <b>{{title}}</b>
+    <article v-html="body"></article>
   </div>
 </template>
 
 <script>
+import scraper from '@/scraper';
+
 export default {
-  props: {
-    articleId: String
+  data() {
+    return {
+      body: '',
+      title: '',
+      articleId: 'k10011828051000'
+    }
   },
 
-  mounted() {
+  computed: {
+    hasArticleId() { 
+      return this.articleId && this.articleId.length == 0;
+    }
+  },
 
+  methods: {
+    scrape() {
+      scraper(this.articleId)
+        .then(article => {
+          this.title = article.title;
+          this.body = article.article.replace(/\n/g, '<br>');
+        });
+    }
   }
 }
 </script>
@@ -28,9 +46,6 @@ export default {
   article {
     font-size: 18px;
     padding: 10px;
-    width: 30%;
-    min-height: 90vh;
-    border: 1px solid #cacaca;
   }
 }
 

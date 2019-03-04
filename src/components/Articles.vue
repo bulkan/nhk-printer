@@ -3,12 +3,11 @@
     <div class="sheet">
       <div class="columns">
         <div class="col">
-          <article></article>
+          <nhk-article></nhk-article>
         </div>
 
         <div class="col">
-          <article>
-          </article>
+          <nhk-article></nhk-article>
         </div>
       </div>
     </div>
