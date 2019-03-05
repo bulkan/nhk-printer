@@ -1,6 +1,9 @@
 {
   "version": 2,
-  "alias": ["nhk.bulkanevcimen.com"],
+  "alias": [
+    "nhk.bulkanevcimen.com",
+    "nhk-printer.bulkan.dev"
+  ],
   "name": "nhk-printer",
   "builds": [
     {"src": "package.json", "use": "@now/static-build"}
