@@ -6,9 +6,9 @@
           <nhk-article></nhk-article>
         </div>
 
-        <div class="col">
+        <!-- <div class="col">
           <nhk-article></nhk-article>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
     </div>
 
     <b>{{title}}</b>
-    <article v-html="body"></article>
+    <div class="article" v-html="body"></div>
   </div>
 </template>
 
@@ -43,13 +43,13 @@ export default {
 
 <style lang="scss" scoped>
 .nhkArticle {
-  article {
+  .article {
     font-size: 18px;
     padding: 10px;
-    -webkit-user-select: all;  /* Chrome all / Safari all */
-    -moz-user-select: all;     /* Firefox all */
-    -ms-user-select: all;      /* IE 10+ */
-    user-select: all;          /* Likely future */   
+    // -webkit-user-select: all;  /* Chrome all / Safari all */
+    // -moz-user-select: all;     /* Firefox all */
+    // -ms-user-select: all;      /* IE 10+ */
+    // user-select: all;          /* Likely future */   
   }
 }
 
