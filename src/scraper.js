@@ -14,7 +14,7 @@ function scrapeArticle(body) {
 }
 
 export default function scraper(articleId) {
-  return fetch(`http://www3.nhk.or.jp/news/easy/${articleId}/${articleId}.html`)
+  return fetch(`https://www3.nhk.or.jp/news/easy/${articleId}/${articleId}.html`)
     .then(res => res.text())
     .then(scrapeArticle);
 }
