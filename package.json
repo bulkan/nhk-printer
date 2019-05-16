@@ -10,6 +10,7 @@
     "now-build": "vue-cli-service build"
   },
   "dependencies": {
+    "copy-to-clipboard": "^3.2.0",
     "lodash": "4.17.5",
     "nhkeasy": "^2.1.0",
     "paper-css": "^0.4.1",

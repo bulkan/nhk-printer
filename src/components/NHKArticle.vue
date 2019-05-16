@@ -14,6 +14,7 @@
 
 <script>
 import scraper from '@/scraper';
+import copy from 'copy-to-clipboard';
 
 export default {
   data() {
@@ -36,6 +37,7 @@ export default {
         .then(article => {
           this.title = article.title;
           this.body = article.article.replace(/\n/g, '<br>');
+          copy(`${article.title}\n${article.article}`);
         });
     }
   }
@@ -48,10 +50,6 @@ export default {
   .article {
     font-size: 18px;
     padding: 10px;
-    -webkit-user-select: all;  /* Chrome all / Safari all */
-    -moz-user-select: all;     /* Firefox all */
-    -ms-user-select: all;      /* IE 10+ */
-    user-select: all;          /* Likely future */   
   }
 }
 

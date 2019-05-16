@@ -40,7 +40,7 @@ export default {
     .col {
       padding: 10px;
       // width: 30%;
-      min-height: 90vh;
+      min-height: 100vh;
       border: 1px solid #cacaca;
 
       &:first-child {
