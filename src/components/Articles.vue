@@ -39,7 +39,7 @@ export default {
 
     .col {
       padding: 10px;
-      width: 30%;
+      // width: 30%;
       min-height: 90vh;
       border: 1px solid #cacaca;
 
@@ -57,8 +57,8 @@ export default {
     .columns {
       .col {
         min-height: auto;
-        height: 200mm;
-        width: 90mm;
+        // height: 200mm;
+        // width: 90mm;
         border: 1px dashed #dfdfdf;
       }
     }

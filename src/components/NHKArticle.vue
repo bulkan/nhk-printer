@@ -5,8 +5,10 @@
       <button :disabled="hasArticleId" @click="scrape()">Scrape</button>
     </div>
 
-    <h1>{{title}}</h1>
-    <div class="article" v-html="body"></div>
+    <div>
+      <h1>{{title}}</h1>
+      <div class="article" v-html="body"></div>
+    </div>
   </div>
 </template>
 
@@ -46,10 +48,10 @@ export default {
   .article {
     font-size: 18px;
     padding: 10px;
-    // -webkit-user-select: all;  /* Chrome all / Safari all */
-    // -moz-user-select: all;     /* Firefox all */
-    // -ms-user-select: all;      /* IE 10+ */
-    // user-select: all;          /* Likely future */   
+    -webkit-user-select: all;  /* Chrome all / Safari all */
+    -moz-user-select: all;     /* Firefox all */
+    -ms-user-select: all;      /* IE 10+ */
+    user-select: all;          /* Likely future */   
   }
 }
 
