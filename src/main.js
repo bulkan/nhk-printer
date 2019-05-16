@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import 'paper-css/paper.min.css';
+// import 'paper-css/paper.min.css';
 
 Vue.config.productionTip = false
 

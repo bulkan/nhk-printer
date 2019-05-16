@@ -5,7 +5,7 @@
       <button :disabled="hasArticleId" @click="scrape()">Scrape</button>
     </div>
 
-    <b>{{title}}</b>
+    <h1>{{title}}</h1>
     <div class="article" v-html="body"></div>
   </div>
 </template>
